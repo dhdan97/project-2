@@ -14,8 +14,34 @@
 using std::cin;
 using std::cout;
 using std::endl;
+#include <cmath>
+
+int prime(int);
 
 int main()
 {
+	int n;
+	while(cin >> n)
+	{
+		if(prime(n) == 0)
+			cout << "1\n";
+		if(prime(n) == 1)
+			cout << "0\n"
+	}
 	return 0;
+}
+int prime(int n)
+{
+	int isprime = 0;
+	
+	for(int k = 2; k <= n-1; ++k)
+	{
+		if(n % k == 0)
+		{
+			isprime = 1;
+			break;
+		}
+	}
+	return isprime;
+}
 }
